@@ -3,7 +3,10 @@
 ## Introduction
 
 The dataset we'll be using for this project contains information on various power outages throughout the United States. Through examining this dataset, we hope to answer the question, "What factors cause more or less customers to be affected by power outages?" By identifying what factors cause power outages to have the most far-reaching effects, we hope to gain new insights as to how to prevent these outages in the future.
-In order to perform a holistic analysis, we ought to examine as many potentially relevant columns as possible. In particular, we will be considering the following columns - ['YEAR', 'MONTH', 'U.S._STATE', 'ANOMALY.LEVEL', 'CLIMATE.CATEGORY', 'OUTAGE.START.DATE', 'OUTAGE.START.TIME', 'OUTAGE.RESTORATION.DATE', 'OUTAGE.RESTORATION.TIME', 'CAUSE.CATEGORY', 'CAUSE.CATEGORY.DETAIL', 'HURRICANE.NAMES', 'OUTAGE.DURATION', 'CUSTOMERS.AFFECTED', 'TOTAL.PRICE', 'TOTAL.SALES']. Descriptions of these columns, as well as those included in the original dataset but ommitted from this analysis, can be found [here](https://www.sciencedirect.com/science/article/pii/S2352340918307182>)
+
+In order to perform a holistic analysis, we ought to examine as many potentially relevant columns as possible. In particular, we will be considering the following columns - ['YEAR', 'MONTH', 'U.S._STATE', 'ANOMALY.LEVEL', 'CLIMATE.CATEGORY', 'OUTAGE.START.DATE', 'OUTAGE.START.TIME', 'OUTAGE.RESTORATION.DATE', 'OUTAGE.RESTORATION.TIME', 'CAUSE.CATEGORY', 'CAUSE.CATEGORY.DETAIL', 'HURRICANE.NAMES', 'OUTAGE.DURATION', 'CUSTOMERS.AFFECTED', 'TOTAL.PRICE', 'TOTAL.SALES']. 
+
+Descriptions of these columns, as well as those included in the original dataset but ommitted from this analysis, can be found [here](https://www.sciencedirect.com/science/article/pii/S2352340918307182>)
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -26,13 +29,19 @@ This is a scatter plot that compares the number of customers affected to the pri
 ### Interesting Aggregates
 '| CLIMATE.CATEGORY   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |\n|:-------------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|\n| cold               |             93920.3 |                0        |              76.2712 |    6615.29  |         7016.67 |           165993 |                        207286   |\n| normal             |            126292   |                0.333333 |            1521.89   |    9255.83  |         7859.6  |           195791 |                        249994   |\n| warm               |             74708.3 |                0        |            4474.02   |     758.125 |          nan    |           205123 |                         86869.8 |'
 
-This dataframe, obtained by using the pivot_table method, tells us the mean number of customers affected by each cause for a power outage in each climate classification. This helps us to identify which cause and climate categories tend to have the most signifcant effects.
+This dataframe, obtained by using the pivot_table method, tells us the mean number of customers affected by each cause for a power outage in each climate classification. This helps us to identify which cause and climatess categories tend to have the most signifcant effects.
 
 ## Assessment of Missingness
 ### NMAR Analysis
+I do not believe that any of the columns relevant to my data analysis are NMAR. Many of the columns are MD, like CAUSE.CATEGORY.DETAIL or HURRICANE.NAMES. I thought that the column OUTAGE.DURATION might have a chance of being NMAR, but nothing about the data generation process leads me to believe that the presence of missing values in this column are dependent on the values themselves.
+
 ### Missingness Dependency
+Here, we find that the presence of missing values in the CUSTOMERS.AFFECTED column is a result of the OUTAGE.DURATION column.
+Particularly, we have a p-value of 0.014, which would be considered significant at most commonly used significance levels.
+<iframe src="assets/OUTAGE.DURATION_missingness.html" width=800 height=600 frameBorder=0></iframe>
+
 ## Hypothesis Testing
 
-<iframe src="assets/OUTAGE.DURATION_missingness.html" width=800 height=600 frameBorder=0></iframe>
+
 <iframe src="assets/TOTAL.PRICE_missingness.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="assets/TOTAL.SALES_missingness.html" width=800 height=600 frameBorder=0></iframe>
