@@ -20,6 +20,8 @@ Descriptions of these columns, as well as those included in the original dataset
 |  3 |   2012 |       6 | Minnesota    |            -0.1 | normal             | severe weather     | thunderstorm            |               nan |              2550 |                68200 |          9.19 |       5787064 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |
 |  4 |   2015 |       7 | Minnesota    |             1.2 | warm               | severe weather     | nan                     |               nan |              1740 |               250000 |         10.43 |       5970339 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |
 
+
+
 1. First, I read in the .xlsx file using pd.read_excel(), and filtered to the appropriate columns 
 2. Next, I checked each column for missing values. To do so, I counted how many null values already existed in each column, and took a glance at the unique values in each column to see if any missing values were stored under other names. I did not find this to be the case
 3. Next, I combined columns that kept the date and time of an outage's start and resolution into single columns of type pd.TimeStamp
@@ -40,6 +42,8 @@ This is a scatter plot that compares the number of customers affected to the pri
 | cold               |             93920.3 |                0        |              76.2712 |    6615.29  |         7016.67 |           165993 |                        207286   |
 | normal             |            126292   |                0.333333 |            1521.89   |    9255.83  |         7859.6  |           195791 |                        249994   |
 | warm               |             74708.3 |                0        |            4474.02   |     758.125 |          nan    |           205123 |                         86869.8 |
+
+
 
 This dataframe, obtained by using the pivot_table method, tells us the mean number of customers affected by each cause for a power outage in each climate classification. This helps us to identify which cause and climatess categories tend to have the most signifcant effects.
 
