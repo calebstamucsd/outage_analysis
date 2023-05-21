@@ -11,6 +11,7 @@ Descriptions of these columns, as well as those included in the original dataset
 ## Data Cleaning and Exploratory Data Analysis
 
 ### Data Cleaning
+
 |    |   YEAR |   MONTH | U.S._STATE   |   ANOMALY.LEVEL | CLIMATE.CATEGORY   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   HURRICANE.NAMES |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |   TOTAL.PRICE |   TOTAL.SALES | OUTAGE.START        | OUTAGE.RESTORATION   |
 |---:|-------:|--------:|:-------------|----------------:|:-------------------|:-------------------|:------------------------|------------------:|------------------:|---------------------:|--------------:|--------------:|:--------------------|:---------------------|
 |  0 |   2011 |       7 | Minnesota    |            -0.3 | normal             | severe weather     | nan                     |               nan |              3060 |                70000 |          9.28 |       6562520 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  |
@@ -33,6 +34,7 @@ This is a bar chart of the different cause categories for all of the recorded po
 This is a scatter plot that compares the number of customers affected to the price of electricity in the region where the outage occured. We might expect that areas with more expensive electricity would have less customers affected, but the scatter plot does not demonstrate such an obvious relationship.
 
 ### Interesting Aggregates
+
 | CLIMATE.CATEGORY   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
 |:-------------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
 | cold               |             93920.3 |                0        |              76.2712 |    6615.29  |         7016.67 |           165993 |                        207286   |
