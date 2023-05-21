@@ -41,7 +41,12 @@ Particularly, we have a p-value of 0.014, which would be considered significant 
 <iframe src="assets/OUTAGE.DURATION_missingness.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Hypothesis Testing
+Null Hypothesis: There is no significant difference in the average amount of customers affected by power outages in California and Texas.
+Alternative Hypothesis: Power outages in Texas affect more customers, on average, than power outages in Texas.
+P-value: 0.544
+So, we fail to reject the null hypothesis.
 
+This is a good test to perform because it is holistic and topical. The Texas Interconnection Power Grid is maintained as a separate power grid from the rest of the nation, a decision often criticized after mass outages in Texas such as in the Winter of 2021. This permutation test answers whether the factor of Texas being on a separate power grid might result in an increase in the amount of customers affected.
 
 <iframe src="assets/TOTAL.PRICE_missingness.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="assets/TOTAL.SALES_missingness.html" width=800 height=600 frameBorder=0></iframe>
