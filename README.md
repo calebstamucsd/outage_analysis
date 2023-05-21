@@ -33,7 +33,11 @@ This is a bar chart of the different cause categories for all of the recorded po
 This is a scatter plot that compares the number of customers affected to the price of electricity in the region where the outage occured. We might expect that areas with more expensive electricity would have less customers affected, but the scatter plot does not demonstrate such an obvious relationship.
 
 ### Interesting Aggregates
-| CLIMATE.CATEGORY   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |\n|:-------------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|\n| cold               |             93920.3 |                0        |              76.2712 |    6615.29  |         7016.67 |           165993 |                        207286   |\n| normal             |            126292   |                0.333333 |            1521.89   |    9255.83  |         7859.6  |           195791 |                        249994   |\n| warm               |             74708.3 |                0        |            4474.02   |     758.125 |          nan    |           205123 |                         86869.8 |
+| CLIMATE.CATEGORY   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
+|:-------------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
+| cold               |             93920.3 |                0        |              76.2712 |    6615.29  |         7016.67 |           165993 |                        207286   |
+| normal             |            126292   |                0.333333 |            1521.89   |    9255.83  |         7859.6  |           195791 |                        249994   |
+| warm               |             74708.3 |                0        |            4474.02   |     758.125 |          nan    |           205123 |                         86869.8 |
 
 This dataframe, obtained by using the pivot_table method, tells us the mean number of customers affected by each cause for a power outage in each climate classification. This helps us to identify which cause and climatess categories tend to have the most signifcant effects.
 
