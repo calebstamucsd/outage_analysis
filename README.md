@@ -5,7 +5,7 @@ In order to perform a holistic analysis, we ought to examine as many potentially
 
 ## Data Cleaning and Exploratory Data Analysis
 
-<h2> Data Cleaning </h2>
+### Data Cleaning
 
 1. First, I read in the .xlsx file using pd.read_excel(), and filtered to the appropriate columns 
 2. Next, I checked each column for missing values. To do so, I counted how many null values already existed in each column, and took a glance at the unique values in each column to see if any missing values were stored under other names. I did not find this to be the case
@@ -13,7 +13,9 @@ In order to perform a holistic analysis, we ought to examine as many potentially
 4. Finally, I casted columns of unecessary datatypes into more specific types
 
 ### Univariate Analysis
+<iframe src="assets/bar_chart.html" width=800 height=600 frameBorder=0></iframe>
 ### Bivariate Analysis
+<iframe src="assets/scatter.html" width=800 height=600 frameBorder=0></iframe>
 ### Interesting Aggregates
 ## Assessment of Missingness
 ### NMAR Analysis
